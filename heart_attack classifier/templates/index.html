@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:green;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>heart attack prediction</h1>
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            
+            <input type="number" name="cp" placeholder="cp"required="required">
+            <br>
+            <input type="number" name="thalachh" placeholder="thalachh" required="required">
+            <br>
+            <input type="number" name="chol" placeholder="chol"required="required">
+            <br>
+            <input type="number" name="fbs" placeholder="fbs" required="required">
+            <br>
+            <input type="number" name="caa" placeholder="caa" required="required">
+            <br>
+            
+
+            <button type="submit" class="btn1">prediction</button>
+<br>
+        </form>
+
+
+        <h2>
+            HEART ATTACK prediction is {{result}}
+         </h2>
+        
+    </div>
+</body>
+
+
+</html>

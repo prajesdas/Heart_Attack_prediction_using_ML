@@ -1,0 +1,7 @@
+#here we put all the requirements which are need for this project
+
+Flask
+numpy
+pandas
+scikit-learn==1.3.2.
+
